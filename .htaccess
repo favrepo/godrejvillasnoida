@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^godrejvillasnoida\.co.in$
+RewriteRule ^(.*) http://www.godrejvillasnoida.co.in/$1 [R=301]
+
+RewriteRule ^(.*)index\.(html?)$ /$1 [R=301,NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^ http://www.godrejvillasnoida.co.in/index.html [L,R]
